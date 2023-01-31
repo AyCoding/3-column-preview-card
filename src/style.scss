@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+// (paragraphs)
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+
+//(background, headings, buttons)
+$Very-light-gray: hsl(0, 0%, 95%);
+
+body {
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 20px;
+
+
+  .card {
+    color: #FFF;
+    width: 90%;
+    max-width: 300px;
+    padding: 50px 20px;
+
+    &:first-child {
+      background: $Bright-orange;
+
+      a {
+        color: $Bright-orange;
+      }
+    }
+
+    &:nth-child(2) {
+      background: $Dark-cyan;
+
+      a {
+        color: $Dark-cyan;
+      }
+    }
+
+    &:nth-child(3) {
+      background: $Very-dark-cyan;
+
+      a {
+        color: $Very-dark-cyan;
+      }
+    }
+  img, h1, p {
+    margin-bottom: 20px;
+  }
+    h1 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      text-transform: uppercase;
+      color: $Very-light-gray;
+    }
+
+    p {
+      line-height: 1.5;
+      color: $Transparent-white;
+    }
+
+    .btn {
+      display: inline-block;
+      background: $Very-light-gray;
+      margin-top: 40px;
+      border-radius: 24px;
+      border: 2px $Very-light-gray solid;
+
+      &:hover {
+        background: transparent;
+
+        a {
+          color: $Very-light-gray;
+        }
+      }
+
+      a {
+        display: inline-block;
+        padding: 15px 30px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
